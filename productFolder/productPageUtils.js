@@ -30,7 +30,7 @@ export function createProductListing(item) {
     const descriptionEl = document.createElement('p');
     descriptionEl.textContent = item.description;
     liEl.append(descriptionEl);
-    
+
 
     return liEl;
 }
