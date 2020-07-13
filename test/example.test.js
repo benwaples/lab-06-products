@@ -7,16 +7,16 @@ test('receive an array of objects and create an html li element from it', (expec
     //Arrange
     // Set up your arguments and expectations
     const oar = {
-        id: '0arr3z',
+        id: 'oar',
         name: 'Port oars',
-        image: '../productFolder/photos/oartulips.jpg',
+        image: 'photos/oartulips.jpg',
         description: 'This is designed to go faster than starboard oars no matter what',
         category: 'equipment',
         price: 20,
         cost: 19.99
     };
     
-    const expected = '<li class="equipment" title="This is designed to go faster than starboard oars no matter what"><h3>Port oars</h3><img src="../productFolder/photos/oartulips.jpg" alt="Port oars image"><p class="price">$20.00<button value="0arr3z">Add</button></p></li>';
+    const expected = '<li class="equipment" title="This is designed to go faster than starboard oars no matter what"><h3>Port oars</h3><img src="photos/oartulips.jpg" alt="Port oars image"><p class="price">$20.00<button value="oar">Add</button></p><p>This is designed to go faster than starboard oars no matter what</p></li>';
     
     //Act 
     // Call the function you're testing and set the result to a const

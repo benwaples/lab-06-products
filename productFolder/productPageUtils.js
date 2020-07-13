@@ -25,8 +25,12 @@ export function createProductListing(item) {
     buttonEl.value = item.id;
     buttonEl.textContent = 'Add';
     pEl.append(buttonEl);
-    
     liEl.append(pEl);
+
+    const descriptionEl = document.createElement('p');
+    descriptionEl.textContent = item.description;
+    liEl.append(descriptionEl);
+    
 
     return liEl;
 }

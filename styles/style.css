@@ -117,3 +117,7 @@ footer {
     }
 
   }
+
+  button {
+      cursor: pointer;
+  }
