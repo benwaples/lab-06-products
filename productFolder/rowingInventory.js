@@ -10,4 +10,18 @@ const product = [
         price: 20,
         cost: 19.99
     },
+    {
+        id: '',
+        name: '',
+        image: '',
+        description: '',
+        category: '',
+        price: ,
+        cost: 
+    },
+    {
+
+    },
+    {},
+    {},
 ]
