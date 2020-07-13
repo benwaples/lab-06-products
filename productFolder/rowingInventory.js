@@ -23,7 +23,7 @@ const oarStar = {
 const boat8 = {
     id: 'v3sp001e',
     name: 'Vespoli v8',
-    image: '/photos/shell8.jpg',
+    image: 'photos/shell8.jpg',
     description: 'Go fast with your buds in this quick rig',
     category: 'equipment',
     price: 55,
@@ -33,7 +33,7 @@ const boat8 = {
 const boat4 = {
     id: 'p0c0ck13',
     name: 'Pocock',
-    image: '/photos/rowing4.gif',
+    image: 'photos/rowing4.gif',
     description: 'Zoom along with your closest buds in a 4 person boat',
     category: 'equipment',
     price: 70,
@@ -43,7 +43,7 @@ const boat4 = {
 const mensGear = {
     id: 'tr0uz35z4d00ds',
     name: 'Mens trou',
-    image: '/photos/mensTrou.jpg',
+    image: 'photos/mensTrou.jpg',
     description: 'These will save you 3 splits on your 2k',
     category: 'gear',
     price: 15,
@@ -53,11 +53,20 @@ const mensGear = {
 const womensGear = {
     id: 'tr0uz35z4L4d13s',
     name: 'Womens trou',
-    image: '/photos/womensTrou.jpg',
+    image: 'photos/womensTrou.jpg',
     description: 'Instantly 15 seconds faster on your 2k',
     category: 'gear',
     price: 15,
     cost: 5
 };
 
-export default [oarPort, oarStar, boat8, boat4, mensGear, womensGear]
+const items = [
+    oarPort,
+    oarStar,
+    boat8,
+    boat4, 
+    mensGear,
+    womensGear
+];
+
+export default items;
