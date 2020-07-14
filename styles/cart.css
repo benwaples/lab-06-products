@@ -20,11 +20,12 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--color4);
+    padding: 20px;
 }
 
 .fixed_header{
-    margin-top: 20px;
     width: 400px;
+    height: auto;
     table-layout: fixed;
     border-collapse: collapse;
     border: solid black 2px;
