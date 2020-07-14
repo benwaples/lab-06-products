@@ -1,0 +1,77 @@
+
+body {
+    --color1: #353531ff;
+    --color2: #ec4e20ff;
+    --color3: #ff9505ff;
+    --color4: #016fb9ff;
+    --color5: #000000ff;
+
+    /* --color1: #fa8638ff;
+    --color2: #fffd77ff;
+    --color3: #ffe882ff;
+    --color4: #388697ff;
+    --color5: #271033ff; */
+    font-family: 'Merriweather', serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color4);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color5);
+    color: white;
+    height: auto;
+    box-shadow: var(--shadow);
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
+
+button {
+    background-color: var(--color2);
+    margin-left: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+content {
+    width: 80%;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.price {
+    margin: 10px;
+    border: solid black 2px;
+    padding: 5px;
+}
+  
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
