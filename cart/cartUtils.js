@@ -1,8 +1,10 @@
 
 export function createLineItem(lineItem, catalog) {
+    const matchingCatalogItem = findById(catalog, lineItem.id);
+
     const trEl = document.createElement('tr');
     const itemEl = document.createElement('td');
-    itemEl.textContent = catalog.name;
+    itemEl.textContent = matchingCatalogItem.name;
     trEl.appendChild(itemEl);
 
     const qtyEl = document.createElement('td');
@@ -11,11 +13,11 @@ export function createLineItem(lineItem, catalog) {
     trEl.appendChild(qtyEl);
 
     const itemPriceEl = document.createElement('td');
-    itemPriceEl.textContent = `$${catalog.price.toFixed(2)}`;
+    itemPriceEl.textContent = `$${matchingCatalogItem.price.toFixed(2)}`;
     trEl.appendChild(itemPriceEl);
 
     const lineItemTotal = document.createElement('td');
-    const total = lineItem.quantity * catalog.price;
+    const total = calcLineItem(lineItem, matchingCatalogItem);
     lineItemTotal.textContent = `$${total.toFixed(2)}`;
     trEl.appendChild(lineItemTotal);
     return trEl;
@@ -38,5 +40,13 @@ export function totalOrderCost(cart, catalog) {
         orderTotal += Number(lineTotal);
     }
     return orderTotal;
+}
+
+export function calcLineItem(cartItem, catalogObject) {
+    const quantity = Number(cartItem.quantity);
+    const catalogPrice = Number(catalogObject.price);
+    const lineTotal = quantity * catalogPrice;
+
+    return lineTotal;
 }
 

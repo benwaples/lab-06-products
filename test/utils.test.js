@@ -1,4 +1,7 @@
-import { findById, totalOrderCost } from '../cart/cartUtils.js';
+import { findById, 
+    totalOrderCost,
+    calcLineItem
+} from '../cart/cartUtils.js';
 import items from '../data/rowingInventory.js';
 import cart from '../data/cartContents.js';
 
@@ -37,6 +40,22 @@ test('calculate the order total based on what is in the array and cart', (assert
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = totalOrderCost(myCart, catalog);
+    
+   //Assert
+   // Make assertions about what is expected versus the actual result
+    assert.equal(actual, expected);
+});
+
+test('calculate line item total based off the cart item quantity and catalog price', (assert) => {
+    //Arrange
+   // Set up your parameters and expectations
+    const cartItem = cart[0];
+    const catalogObject = items[0];
+    const expected = 20;
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = calcLineItem(cartItem, catalogObject);
     
    //Assert
    // Make assertions about what is expected versus the actual result
