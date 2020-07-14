@@ -38,14 +38,12 @@ test('receive an array of objects and create an html tr element from it', (expec
         quantity: 1
     };
     const oar = findById(items, cartItem.id);
-    console.log('oar item from catalog', oar);
     
-    const expected = '<tr><td>Port oar</td><td class="qty">1</td><td>$20.00</td><td>$20.00</td></tr>';
+    const expected = '<tr><td>Port oars</td><td class="qty">1</td><td>$20.00</td><td>$20.00</td></tr>';
     
     //Act 
     // Call the function you're testing and set the result to a const
     const dom = createLineItem(cartItem, oar);
-    console.log('dom element start', dom)
     const html = dom.outerHTML;
 
     //Expect
