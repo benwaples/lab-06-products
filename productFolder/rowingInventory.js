@@ -44,7 +44,7 @@ const mensGear = {
     id: 'tr0uz35z4d00ds',
     name: 'Mens trou',
     image: 'photos/mensTrou.jpg',
-    description: 'These will save you 3 splits on your 2k',
+    description: 'This will save you 3 splits on your 2k',
     category: 'gear',
     price: 15,
     cost: 5
