@@ -69,7 +69,7 @@ header {
     align-items: center;
     background-color: var(--color5);
     color: white;
-    height: var(--header-height);
+    height: auto;
     box-shadow: var(--shadow);
 }
 
