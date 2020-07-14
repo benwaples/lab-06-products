@@ -13,13 +13,21 @@ ul {
 
 li {
     width: 200px;
-    height: 300px;
+    height: auto;
     background-color: var(--color1);
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    
+
 }
 
 li img {
     width: 150px;
+    border: black solid 1px;
 }
 
 main {
@@ -28,6 +36,15 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--color4);
+}
+
+#product-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 auto;
 }
 
 #productList {
@@ -43,12 +60,14 @@ main {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    flex: 0 1 auto;
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: var(--color5);
+    color: white;
     height: var(--header-height);
     box-shadow: var(--shadow);
 }

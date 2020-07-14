@@ -32,7 +32,7 @@ const boat8 = {
 
 const boat4 = {
     id: 'p0c0ck13',
-    name: 'Pocock',
+    name: 'Pocock 4',
     image: 'photos/rowing4.gif',
     description: 'Zoom along with your closest buds in a 4 person boat',
     category: 'equipment',
