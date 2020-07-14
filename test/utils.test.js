@@ -1,5 +1,6 @@
-import { findById } from '../cart/cartUtils.js';
+import { findById, totalOrderCost } from '../cart/cartUtils.js';
 import items from '../data/rowingInventory.js';
+import cart from '../data/cartContents.js';
 
 const test = QUnit.test;
 
@@ -24,4 +25,20 @@ test('it should take in an id and an array and return the matching item', (asser
    // Make assertions about what is expected versus the actual result
     assert.equal(actual1, expected1);
     assert.equal(actual2, expected2);
+});
+
+test('calculate the order total based on what is in the array and cart', (assert) => {
+    //Arrange
+   // Set up your parameters and expectations
+    const myCart = cart;
+    const catalog = items;
+    const expected = 210;
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = totalOrderCost(myCart, catalog);
+    
+   //Assert
+   // Make assertions about what is expected versus the actual result
+    assert.equal(actual, expected);
 });

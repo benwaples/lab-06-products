@@ -27,3 +27,16 @@ export function findById(someArray, someId) {
             return someArray[i];
     }
 }
+
+export function totalOrderCost(cart, catalog) {
+    let orderTotal = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        const lineItem = cart[i];
+        const inventoryItem = findById(catalog, lineItem.id);
+        const lineTotal = lineItem.quantity * inventoryItem.price;
+        orderTotal += Number(lineTotal);
+    }
+    return orderTotal;
+}
+
