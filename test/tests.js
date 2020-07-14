@@ -1,1 +1,2 @@
-import './example.test.js';
+import './createProductListing.test.js';
+import './cartUtils.test.js';
