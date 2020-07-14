@@ -1,6 +1,8 @@
 // IMPORT MODULES under test here:
 import { createProductListing } from '../productFolder/productPageUtils.js';
-import { createLineItem } from '../cart/cartUtils.js';
+import items from '../data/rowingInventory.js';
+import cart from '../data/cartContents.js';
+import { createLineItem, findById } from '../cart/cartUtils.js';
 const test = QUnit.test;
 
 test('receive an array of objects and create an html li element from it', (expect) => {
@@ -35,12 +37,15 @@ test('receive an array of objects and create an html tr element from it', (expec
         id: '0aRP0rt',
         quantity: 1
     };
+    const oar = findById(items, cartItem.id);
+    console.log('oar item from catalog', oar);
     
-    const expected = '<tr><td>port oar</td><td class="qty">1</td><td>$20.00</td><td>$20.00</td></tr>';
+    const expected = '<tr><td>Port oar</td><td class="qty">1</td><td>$20.00</td><td>$20.00</td></tr>';
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const dom = createLineItem(cartItem);
+    const dom = createLineItem(cartItem, oar);
+    console.log('dom element start', dom)
     const html = dom.outerHTML;
 
     //Expect
