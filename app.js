@@ -6,4 +6,4 @@ const doorButton = document.querySelector('#store-door');
 // set event listeners to update state and DOM 
 doorButton.addEventListener('click', () => {
     
-})
+});
