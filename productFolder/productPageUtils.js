@@ -28,6 +28,7 @@ export function createProductListing(item) {
     liEl.append(pEl);
 
     const descriptionEl = document.createElement('p');
+    descriptionEl.classList = 'description';
     descriptionEl.textContent = item.description;
     liEl.append(descriptionEl);
 

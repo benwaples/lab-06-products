@@ -26,6 +26,7 @@ li {
     align-items: center;
     flex: auto;
     border-radius: 10px;
+    border: var(--color2) solid 1px;
 }
 
 li img {
@@ -87,6 +88,10 @@ footer {
     box-shadow: var(--shadow);
 }
 
+button {
+    background-color: var(--color2);
+    margin-left: 10px;
+}
 
 h2 {
     font-size: 1.8rem;
@@ -98,8 +103,10 @@ content {
     width: 80%;
 }
 
-p {
+.price {
     margin: 10px;
+    border: solid black 2px;
+    padding: 5px;
 }
   
 footer {
