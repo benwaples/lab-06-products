@@ -103,6 +103,10 @@ content {
     width: 80%;
 }
 
+.description {
+    margin-top: 10px;
+}
+
 .price {
     margin: 10px;
     border: solid black 2px;
