@@ -1,7 +1,5 @@
 // IMPORT MODULES under test here:
 import { createProductListing } from '../productFolder/productPageUtils.js';
-import items from '../data/rowingInventory.js';
-import { createLineItem, findById } from '../cart/cartUtils.js';
 const test = QUnit.test;
 
 test('receive an array of objects and create an html li element from it', (expect) => {
