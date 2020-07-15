@@ -8,22 +8,26 @@ const cartTable = document.querySelector('.cartTable');
 const orderTotal = document.querySelector('#orderTotal');
 const placeOrderButton = document.querySelector('#placeOrder');
 
+//get cart from local storage
 const cart = getCart();
 
+//display cart from local storage
 for (let i = 0; i < cart.length; i++) {
     const cartItem = cart[i];
     const cartLineItem = createLineItem(cartItem, items);
     cartTable.appendChild(cartLineItem);
 }
 
+//find total for cart
 const cartCost = totalOrderCost(cart, items);
 orderTotal.textContent = `$${cartCost.toFixed(2)}`;
 
+//display order button if cart has content
 if (cart.length > 0) {
     placeOrderButton.classList.remove('hidden');
 } 
 
-
+//place the order
 placeOrderButton.addEventListener('click', () => {
     let cartItems = [];
     for (let i = 0; i < cart.length; i++) {
@@ -37,4 +41,6 @@ placeOrderButton.addEventListener('click', () => {
     // display cart items in the alert
     alert(`Pleasure doing business, here's order: ${cartItems.join(', ')}`);
     clearCart();
+
+    window.location = '../';
 });

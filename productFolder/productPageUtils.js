@@ -21,6 +21,26 @@ export function createProductListing(item) {
     const pEl = document.createElement('p');
     pEl.classList.add('price');
     pEl.textContent = `$${item.price.toFixed(2)}`;
+
+    //create a drop down in
+    const qtyInputEl = document.createElement('select');
+    qtyInputEl.id = 'qtySelector' + item.id;
+    const selectEl1 = document.createElement('option');
+    selectEl1.value = 1;
+    selectEl1.textContent = '1';
+    const selectEl2 = document.createElement('option');
+    selectEl2.value = 2;
+    selectEl2.textContent = '2';
+    const selectEl3 = document.createElement('option');
+    selectEl3.value = 3;
+    selectEl3.textContent = '3';
+    const selectEl4 = document.createElement('option');
+    selectEl4.value = 4;
+    selectEl4.textContent = '4';
+    qtyInputEl.append(selectEl1, selectEl2, selectEl3, selectEl4);
+
+    pEl.append(qtyInputEl);
+
     
     const buttonEl = document.createElement('button');
     buttonEl.value = item.id;
@@ -28,15 +48,16 @@ export function createProductListing(item) {
     buttonEl.addEventListener('click', () => {
         const cart = getCart();
         const itemGoingIntoCart = findById(cart, item.id);
-
+        const qtyAddedInput = document.querySelector('#qtySelector' + item.id);
+        const qtyValue = Number(qtyAddedInput.value);
         if (!itemGoingIntoCart) {
             const initialItemInCart = {
                 id: item.id,
-                quantity: 1
+                quantity: qtyValue
             };
             cart.push(initialItemInCart);
         } else {
-            itemGoingIntoCart.quantity ++;
+            itemGoingIntoCart.quantity += qtyValue;
         }
 
         addToCart(cart);
