@@ -1,4 +1,4 @@
-import equipment from './rowingInventory.js';
+import equipment from '../data/rowingInventory.js';
 import { createProductListing } from './productPageUtils.js';
 
 const rowingItems = document.querySelector('#productList');

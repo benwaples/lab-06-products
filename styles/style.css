@@ -118,6 +118,19 @@ footer {
 
   }
 
-  button {
+  button, .pAsButton {
       cursor: pointer;
+  }
+
+  header h3, header p {
+    margin-top: 0;
+  }
+  
+  #navBar ul{
+    list-style-type: none;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-inline-start: 0;
   }

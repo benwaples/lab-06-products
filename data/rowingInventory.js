@@ -1,7 +1,7 @@
 //create 5 rowing items and the data structure, then export them to productApp
 
 const oarPort = {
-    id: 'oar',
+    id: '0aRP0rt',
     name: 'Port oars',
     image: 'photos/oartulips.jpg',
     description: 'This is designed to go faster than starboard oars no matter what',
@@ -11,7 +11,7 @@ const oarPort = {
 };
 
 const oarStar = {
-    id: 'oar',
+    id: '0Ar57aR',
     name: 'Starboard oars',
     image: 'photos/oartulips.jpg',
     description: 'Data shows that these oars don\'t go as fast as Port oars',
