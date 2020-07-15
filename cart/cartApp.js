@@ -1,10 +1,13 @@
 import { createLineItem, totalOrderCost } from './cartUtils.js';
+import { getCart, clearCart } from './cart-api.js'
 
 import items from '../data/rowingInventory.js';
-import cart from '../data/cartContents.js';
+
 
 const cartTable = document.querySelector('.cartTable');
 const orderTotal = document.querySelector('#orderTotal');
+
+const cart = getCart();
 
 for (let i = 0; i < cart.length; i++) {
     const cartItem = cart[i];
