@@ -72,7 +72,14 @@ header {
     box-shadow: var(--shadow);
 }
 
+#totalRow {
+  background-color: black;
+  color: white;
+}
 
+tr:nth-child(even) {
+  background-color: grey;
+}
 
 footer {
     display: flex;
