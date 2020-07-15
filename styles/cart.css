@@ -31,6 +31,10 @@ main {
     border: solid black 2px;
 }
 
+.cartTable {
+  height: 400px;
+}
+
 .fixed_header tbody{
   display:block;
   width: 100%;
