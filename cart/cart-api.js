@@ -1,7 +1,8 @@
 
 export function getCart() {
-    const initialEmptyCart = [];
+    const initialEmptyCart = '[]';
     const rawCart = localStorage.getItem('CART') || initialEmptyCart;
+    console.log('raw cart data',rawCart);
     const cart = JSON.parse(rawCart);
 
     return cart;

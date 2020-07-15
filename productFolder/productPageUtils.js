@@ -1,4 +1,5 @@
-
+import { findById } from '../cart/cartUtils.js';
+import { getCart, addToCart } from '../cart/cart-api.js';
 
 export function createProductListing(item) {
     const liEl = document.createElement('li'); 
@@ -24,6 +25,25 @@ export function createProductListing(item) {
     const buttonEl = document.createElement('button');
     buttonEl.value = item.id;
     buttonEl.textContent = 'Add';
+    buttonEl.addEventListener('click', () => {
+        const cart = getCart();
+        const itemGoingIntoCart = findById(cart, item.id);
+
+        if (!itemGoingIntoCart) {
+            const initialItemInCart = {
+                id: item.id,
+                quantity: 1
+            };
+            cart.push(initialItemInCart);
+        } else {
+            itemGoingIntoCart.quantity ++;
+        }
+
+        addToCart(cart);
+
+        //add a counter that is linked to the localStorage for this item that displays the quantity for a given id in the cart
+    });
+
     pEl.append(buttonEl);
     liEl.append(pEl);
 
