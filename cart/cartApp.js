@@ -1,5 +1,4 @@
-import { 
-    createLineItem, totalOrderCost} from './cartUtils.js';
+import { createLineItem, totalOrderCost } from './cartUtils.js';
 
 import items from '../data/rowingInventory.js';
 import cart from '../data/cartContents.js';
@@ -14,5 +13,4 @@ for (let i = 0; i < cart.length; i++) {
 }
 
 const cartCost = totalOrderCost(cart, items);
-console.log('total order cost', cartCost);
-orderTotal.textContent = cartCost;
+orderTotal.textContent = `$${cartCost.toFixed(2)}`;

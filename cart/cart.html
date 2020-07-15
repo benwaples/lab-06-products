@@ -16,6 +16,13 @@
     <header>
         <h1>Ben's Boathouse Store</h1>
         <p>Your Cart!</p>
+        <nav id="navBar">
+            <ul>
+                <li class="pAsButton" onclick="window.location.href='../index.html'">Home</li>
+                <li class="pAsButton" onclick="window.location.href='/productFolder/productPage.html'">Store</li>
+                <li class="pAsButton">Cart</li>
+            </ul>
+        </nav>
     </header>
     <main>
         <table class="fixed_header">
@@ -31,10 +38,11 @@
                 <tr>
                     <th></th>
                     <th></th>
-                    <th>Order Total</th>
+                    <th>Order Total:</th>
                     <th id="orderTotal"></th>
                 </tr>
           </table>
+          <button id="placeOrder">Place Order</button>
     </main>
     <script type="module" src="cartApp.js"></script>
 </body>
