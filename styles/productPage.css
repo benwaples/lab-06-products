@@ -112,6 +112,11 @@ content {
     border: solid black 2px;
     padding: 5px;
 }
+
+select[id^="qty"] {
+    margin-left: 10px;
+    margin-right: 5px;
+}
   
 footer {
     position: fixed;
