@@ -1,3 +1,3 @@
 import './createProductListing.test.js';
-import './createLineItem.test.js';
+import './createCartLineItem.test.js';
 import './utils.test.js';
