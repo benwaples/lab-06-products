@@ -76,3 +76,6 @@ const items = [
 ];
 
 export default items;
+
+const stringyItems = JSON.stringify(items);
+localStorage.setItem('ITEMS', stringyItems);

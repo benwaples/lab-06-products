@@ -6,7 +6,7 @@ export function getCart() {
 
     return cart;
 }
-
+ 
 export function addToCart(cart) {
     const stringyCart = JSON.stringify(cart);
     localStorage.setItem('CART', stringyCart);
