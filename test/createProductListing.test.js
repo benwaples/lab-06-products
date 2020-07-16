@@ -12,10 +12,11 @@ test('receive an array of objects and create an html li element from it', (expec
         description: 'This is designed to go faster than starboard oars no matter what',
         category: 'equipment',
         price: 20,
-        cost: 19.99
+        cost: 19.99,
+        invAmount: 8
     };
     
-    const expected = '<li class="equipment" title="This is designed to go faster than starboard oars no matter what"><h3>Port oars</h3><img src="photos/oartulips.jpg" alt="Port oars image"><p class="price">$20.00<select id="qtySelector0aRP0rt"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select><button value="0aRP0rt">Add</button></p><p class="description">This is designed to go faster than starboard oars no matter what</p></li>';
+    const expected = '<li class="equipment" title="This is designed to go faster than starboard oars no matter what"><h3>Port oars</h3><img src="photos/oartulips.jpg" alt="Port oars image"><p class="price">$20.00<select id="qtySelector0aRP0rt"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select><button value="0aRP0rt">Add</button></p><p class="description">This is designed to go faster than starboard oars no matter what</p></li>';
     
     //Act 
     // Call the function you're testing and set the result to a const

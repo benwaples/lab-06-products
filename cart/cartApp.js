@@ -36,10 +36,10 @@ placeOrderButton.addEventListener('click', () => {
         const catalogItem = findById(items, item.id);
         const itemName = catalogItem.name;
         
-        cartItems.push(`${itemName} quantity: ${item.quantity}`);
+        cartItems.push(`${item.quantity} ${itemName}`);
     }
     // display cart items in the alert
-    alert(`Pleasure doing business, here's order: ${cartItems.join(', ')}`);
+    alert(`Pleasure doing business, you'll be receiving: ${cartItems.join(', ')}`);
     clearCart();
 
     window.location = '../';
