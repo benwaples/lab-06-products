@@ -42,7 +42,7 @@ const boat4 = {
 
 const mensGear = {
     id: 'tr0uz35z4d00ds',
-    name: 'Mens trou',
+    name: 'Mens Uni',
     image: 'photos/mensTrou.jpg',
     description: 'This will save you 3 splits on your 2k',
     category: 'gear',
@@ -52,7 +52,7 @@ const mensGear = {
 
 const womensGear = {
     id: 'tr0uz35z4L4d13s',
-    name: 'Womens trou',
+    name: 'Womens Uni',
     image: 'photos/womensTrou.jpg',
     description: 'Instantly 15 seconds faster on your 2k',
     category: 'gear',

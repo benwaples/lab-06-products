@@ -70,10 +70,6 @@ h2 {
     margin-right: 20px;
 }
 
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
-}
-
 header img {
     height: var(--header-height);
 }
@@ -99,38 +95,24 @@ footer {
     box-shadow: var(--shadow);
 }
   
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
+button, li.liAsButton {
+    cursor: pointer;
+}
 
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
+header h3, header p {
+margin-top: 0;
+}
 
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
+#navBar ul{
+list-style-type: none;
+width: 200px;
+display: flex;
+justify-content: space-between;
+margin-top: 0;
+padding-inline-start: 0;
+}
 
-  }
-
-  button, .pAsButton {
-      cursor: pointer;
-  }
-
-  header h3, header p {
-    margin-top: 0;
-  }
-  
-  #navBar ul{
-    list-style-type: none;
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0;
-    padding-inline-start: 0;
-  }
+.hidden {
+    display: none;
+}
