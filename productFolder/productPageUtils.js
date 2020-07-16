@@ -23,21 +23,17 @@ export function createProductListing(item) {
     pEl.textContent = `$${item.price.toFixed(2)}`;
 
     //create a drop down in
+    // make this a for loop so you can make as many as you want
+
+
     const qtyInputEl = document.createElement('select');
     qtyInputEl.id = 'qtySelector' + item.id;
-    const selectEl1 = document.createElement('option');
-    selectEl1.value = 1;
-    selectEl1.textContent = '1';
-    const selectEl2 = document.createElement('option');
-    selectEl2.value = 2;
-    selectEl2.textContent = '2';
-    const selectEl3 = document.createElement('option');
-    selectEl3.value = 3;
-    selectEl3.textContent = '3';
-    const selectEl4 = document.createElement('option');
-    selectEl4.value = 4;
-    selectEl4.textContent = '4';
-    qtyInputEl.append(selectEl1, selectEl2, selectEl3, selectEl4);
+    for (let i = 0; i < item.invAmount; i++) {
+        const selectEl = document.createElement('option');
+        selectEl.value = i;
+        selectEl.textContent = i;
+        qtyInputEl.append(selectEl);
+    }
 
     pEl.append(qtyInputEl);
 
@@ -50,6 +46,14 @@ export function createProductListing(item) {
         const itemGoingIntoCart = findById(cart, item.id);
         const qtyAddedInput = document.querySelector('#qtySelector' + item.id);
         const qtyValue = Number(qtyAddedInput.value);
+        //if user didn't give a quantity when trying to add to cart,
+        // let them know and break out of function.
+        if (!qtyValue) {
+            alert('you didn\'t give a quantity');
+            return;
+        }
+
+        //add items to cart according to the quantity they gave
         if (!itemGoingIntoCart) {
             const initialItemInCart = {
                 id: item.id,

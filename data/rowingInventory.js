@@ -7,7 +7,8 @@ const oarPort = {
     description: 'This is designed to go faster than starboard oars no matter what',
     category: 'equipment',
     price: 20,
-    cost: 19.99
+    cost: 19.99,
+    invAmount: 8
 };
 
 const oarStar = {
@@ -17,7 +18,8 @@ const oarStar = {
     description: 'Data shows that these oars don\'t go as fast as Port oars',
     category: 'equipment',
     price: 20,
-    cost: 19.99
+    cost: 19.99,
+    invAmount: 8
 };
 
 const boat8 = {
@@ -27,7 +29,8 @@ const boat8 = {
     description: 'Go fast with your buds in this quick rig',
     category: 'equipment',
     price: 55,
-    cost: 10
+    cost: 10,
+    invAmount: 3
 };
 
 const boat4 = {
@@ -37,7 +40,8 @@ const boat4 = {
     description: 'Zoom along with your closest buds in a 4 person boat',
     category: 'equipment',
     price: 70,
-    cost: 3
+    cost: 3,
+    invAmount: 5
 };
 
 const mensGear = {
@@ -47,7 +51,8 @@ const mensGear = {
     description: 'This will save you 3 splits on your 2k',
     category: 'gear',
     price: 15,
-    cost: 5
+    cost: 5,
+    invAmount: 6
 };
 
 const womensGear = {
@@ -57,7 +62,8 @@ const womensGear = {
     description: 'Instantly 15 seconds faster on your 2k',
     category: 'gear',
     price: 15,
-    cost: 5
+    cost: 5,
+    invAmount: 12
 };
 
 const items = [
