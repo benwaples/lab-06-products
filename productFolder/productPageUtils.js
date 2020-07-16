@@ -22,13 +22,11 @@ export function createProductListing(item) {
     pEl.classList.add('price');
     pEl.textContent = `$${item.price.toFixed(2)}`;
 
-    //create a drop down in
+    //create a drop down in the products page
     // make this a for loop so you can make as many as you want
-
-
     const qtyInputEl = document.createElement('select');
     qtyInputEl.id = 'qtySelector' + item.id;
-    for (let i = 0; i < item.invAmount; i++) {
+    for (let i = 0; i <= item.invAmount; i++) {
         const selectEl = document.createElement('option');
         selectEl.value = i;
         selectEl.textContent = i;

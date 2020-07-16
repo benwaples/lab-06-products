@@ -96,7 +96,7 @@ footer {
 }
   
 
-button, li.liAsButton {
+button, a.aAsButton {
     cursor: pointer;
 }
 
