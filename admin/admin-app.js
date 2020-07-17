@@ -7,16 +7,16 @@ theForm.addEventListener('submit', e => {
 
     e.preventDefault();
 
-    const formDataTheory = new FormData(theForm);
+    const formDataThing = new FormData(theForm);
 
     const newItemToAdd = {
         //add form data things
-        id: formDataTheory.get('id') + 'newItem',
-        name: formDataTheory.get('name'),
-        image: formDataTheory.get('image'),
-        description: formDataTheory.get('description'),
-        price: Number(formDataTheory.get('price')),
-        invAmount: Number(formDataTheory.get('invAmount')),
+        id: formDataThing.get('id') + 'newItem',
+        name: formDataThing.get('name'),
+        image: formDataThing.get('image'),
+        description: formDataThing.get('description'),
+        price: Number(formDataThing.get('price')),
+        invAmount: Number(formDataThing.get('invAmount')),
     };
 
     const existingItems = getItems();
@@ -36,6 +36,14 @@ theForm.addEventListener('submit', e => {
         deleteUl.append(deleteLine);
     }
 
-    theForm.reset();
+    window.location = '../productFolder/productPage.html';
 });
+
+const ItemsToDelete = getItemsToDelete();
+
+for (let i = 0; i < ItemsToDelete.length; i++){
+    const item = ItemsToDelete[i];
+    const deleteLine = createDeleteLine(item);
+    deleteUl.append(deleteLine);
+}
 
