@@ -27,14 +27,15 @@ theForm.addEventListener('submit', e => {
 
     localStorage.setItem('ITEMS', stringyExistingItems);
 
-    window.location = '../productFolder/productPage.html';
+    // window.location = '../productFolder/productPage.html';
+    const deleteItems = getItemsToDelete();
+    
+    for (let i = 0; i < deleteItems.length; i++) {
+        const itemToDelete = deleteItems[i];
+        const deleteLine = createDeleteLine(itemToDelete);
+        deleteUl.append(deleteLine);
+    }
+
+    theForm.reset();
 });
 
-const deleteItems = getItemsToDelete();
-console.log('list of items to delete', deleteItems);
-
-for (let i = 0; i < deleteItems.length; i++) {
-    const itemToDelete = deleteItems[i];
-    const deleteLine = createDeleteLine(itemToDelete);
-    deleteUl.append(deleteLine);
-}

@@ -40,20 +40,16 @@ export function createDeleteLine(item) {
     deleteButtonEl.textContent = 'delete me';
     deleteButtonEl.addEventListener('click', () => {
         const items = getItems();
-        const deleteItems = getItemsToDelete();
-        console.log('');
         for (let i = 0; i < items.length; i ++) {
-            for (let j = 0; j < deleteItems.length; i ++){
-                const item = items[i];
-                const deleteItem = deleteItems[j];
-                if (item.id === deleteItem[i]) {
-                    items.splice(i, 1);
-                }
+            const itemFromLocal = items[i];
+            if (itemFromLocal.id === item.id) {
+                items.splice(i, 1);
             }
-        } 
-
+        }
         const stringyItems = JSON.stringify(items);
         localStorage.setItem('ITEMS', stringyItems);
+
+        liEl.classList.add('hidden');
     });
     liEl.append(deleteButtonEl);
 
