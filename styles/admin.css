@@ -24,6 +24,47 @@ main {
     padding: 20px;
 }
 
+#removeDiv {
+    border: solid 2px var(--color3);
+}
+
+.fixed_header{
+    width: 400px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.fixed_header tbody{
+    display:block;
+    width: 100%;
+    overflow: auto;
+    height: auto;
+}
+
+.fixed_header thead tr {
+   /* display: block; */
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.fixed_header thead {
+  background: black;
+  color:#fff;
+}
+
+.fixed_header th, .fixed_header td {
+  padding: 5px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+  }
+
 header {
     display: flex;
     flex-direction: column;
@@ -39,14 +80,23 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    border: var(--color3) solid 2px;
+    border-radius: 20px;
 }
 
 label {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    justify-content: center;
     align-items: center;
+}
+
+label input {
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 button {
@@ -55,6 +105,10 @@ button {
 
 #removeDiv {
     display: flex;
+}
+
+td {
+    width: 20px;
 }
 
 li {

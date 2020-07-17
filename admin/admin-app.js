@@ -5,7 +5,7 @@ import {
 } from './admin-utils.js';
 
 const theForm = document.querySelector('#form');
-const deleteUl = document.querySelector('#deleteUl');
+const deleteTable = document.querySelector('#deleteBody');
 
 theForm.addEventListener('submit', e => {
 
@@ -31,7 +31,7 @@ theForm.addEventListener('submit', e => {
     for (let i = 0; i < deleteItems.length; i++) {
         const itemToDelete = deleteItems[i];
         const deleteLine = createDeleteLine(itemToDelete);
-        deleteUl.append(deleteLine);
+        deleteTable.append(deleteLine);
     }
 
     window.location = '../productFolder/productPage.html';
@@ -42,6 +42,6 @@ const ItemsToDelete = getItemsToDelete();
 for (let i = 0; i < ItemsToDelete.length; i++){
     const item = ItemsToDelete[i];
     const deleteLine = createDeleteLine(item);
-    deleteUl.append(deleteLine);
+    deleteTable.append(deleteLine);
 }
 

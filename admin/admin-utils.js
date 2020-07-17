@@ -30,12 +30,17 @@ export function getItemsToDelete() {
 }
 
 export function createDeleteLine(item) {
-    const liEl = document.createElement('li');
+    const liEl = document.createElement('tr');
 
-    const idEl = document.createElement('p');
+    const idEl = document.createElement('td');
     idEl.textContent = item.name;
     liEl.append(idEl);
 
+    const qtyTd = document.createElement('td');
+    qtyTd.textContent = item.invAmount;
+    liEl.append(qtyTd);
+
+    
     const deleteButtonEl = document.createElement('button');
     deleteButtonEl.textContent = 'delete me';
     deleteButtonEl.addEventListener('click', () => {
