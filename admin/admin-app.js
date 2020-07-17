@@ -1,4 +1,8 @@
-import { getItems, getItemsToDelete, createDeleteLine } from './admin-utils.js';
+import {  
+    getItemsToDelete, 
+    createDeleteLine,
+    addNewItems
+} from './admin-utils.js';
 
 const theForm = document.querySelector('#form');
 const deleteUl = document.querySelector('#deleteUl');
@@ -19,13 +23,7 @@ theForm.addEventListener('submit', e => {
         invAmount: Number(formDataThing.get('invAmount')),
     };
 
-    const existingItems = getItems();
-
-    existingItems.push(newItemToAdd);
-
-    const stringyExistingItems = JSON.stringify(existingItems);
-
-    localStorage.setItem('ITEMS', stringyExistingItems);
+    addNewItems(newItemToAdd);
 
     // window.location = '../productFolder/productPage.html';
     const deleteItems = getItemsToDelete();

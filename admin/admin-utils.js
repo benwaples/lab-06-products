@@ -33,7 +33,7 @@ export function createDeleteLine(item) {
     const liEl = document.createElement('li');
 
     const idEl = document.createElement('p');
-    idEl.textContent = item.id;
+    idEl.textContent = item.name;
     liEl.append(idEl);
 
     const deleteButtonEl = document.createElement('button');
@@ -56,3 +56,9 @@ export function createDeleteLine(item) {
     return liEl;
 }
 
+export function addNewItems(item) {
+    const existingItems = getItems();
+    existingItems.push(item);
+    const stringyExistingItems = JSON.stringify(existingItems);
+    localStorage.setItem('ITEMS', stringyExistingItems);
+}
