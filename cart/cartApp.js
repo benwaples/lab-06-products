@@ -1,8 +1,8 @@
 import { createLineItem, totalOrderCost, findById } from './cartUtils.js';
 import { getCart, clearCart } from './cart-api.js';
+import { getItems } from '../admin/admin-utils.js';
 
-import items from '../data/rowingInventory.js';
-
+const items = getItems();
 
 const cartTable = document.querySelector('.cartTable');
 const orderTotal = document.querySelector('#orderTotal');
@@ -29,17 +29,17 @@ if (cart.length > 0) {
 
 //place the order
 placeOrderButton.addEventListener('click', () => {
-    let cartItems = [];
+    let alertMessage = [];
     for (let i = 0; i < cart.length; i++) {
         //loop through the cart and get the getById the name of each item, and push it to cartItems[]
         const item = cart[i];
         const catalogItem = findById(items, item.id);
         const itemName = catalogItem.name;
         
-        cartItems.push(`${item.quantity} ${itemName}`);
+        alertMessage.push(`${item.quantity} ${itemName}`);
     }
     // display cart items in the alert
-    alert(`Pleasure doing business, you'll be receiving: ${cartItems.join(', ')}`);
+    alert(`Pleasure doing business, you'll be receiving: ${alertMessage.join(', ')}`);
     clearCart();
 
     window.location = '../';

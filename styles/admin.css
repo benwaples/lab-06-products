@@ -1,0 +1,146 @@
+
+body {
+    --color1: #353531ff;
+    --color2: #ec4e20ff;
+    --color3: #ff9505ff;
+    --color4: #016fb9ff;
+    --color5: #000000ff;
+
+    /* --color1: #fa8638ff;
+    --color2: #fffd77ff;
+    --color3: #ffe882ff;
+    --color4: #388697ff;
+    --color5: #271033ff; */
+    font-family: 'Merriweather', serif;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color4);
+    padding: 20px;
+}
+
+#removeDiv {
+    border: solid 2px var(--color3);
+}
+
+.fixed_header{
+    width: 400px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.fixed_header tbody{
+    display:block;
+    width: 100%;
+    overflow: auto;
+    height: auto;
+}
+
+.fixed_header thead tr {
+   /* display: block; */
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.fixed_header thead {
+  background: black;
+  color:#fff;
+}
+
+.fixed_header th, .fixed_header td {
+  padding: 5px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+  }
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color5);
+    color: white;
+    height: auto;
+    box-shadow: var(--shadow);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--color3) solid 2px;
+    border-radius: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+label input {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+button {
+    align-self: center;
+}
+
+#removeDiv h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    width: 20px;
+}
+
+li {
+    width: 200px;
+    height: auto;
+    background-color: var(--color1);
+    color: white;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    border-radius: 10px;
+    border: var(--color2) solid 1px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}

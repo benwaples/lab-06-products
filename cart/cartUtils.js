@@ -1,6 +1,9 @@
+// import { getItems } from "../admin/admin-utils";
+
 
 export function createLineItem(lineItem, catalog) {
     const matchingCatalogItem = findById(catalog, lineItem.id);
+    console.log(matchingCatalogItem);
 
     const trEl = document.createElement('tr');
     const itemEl = document.createElement('td');

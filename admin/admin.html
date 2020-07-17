@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Admin Page</h1>
+        <nav id="navBar">
+            <ul>
+                <a class="aAsButton" onclick="window.location.href='../index.html'">Home</a>
+                <a class="aAsButton" onclick="window.location.href='/productFolder/productPage.html'">Store</a>
+                <a class="aAsButton" onclick="window.location.href='../cart/cart.html'">Cart</a>
+                <a>Admin</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="form">
+            <h2>add your rowing item</h2>
+            <label>
+                id
+                <input name="id">
+            </label>
+            <label>
+                name
+                <input name="name">
+            </label>
+            <label>
+                image
+                <input name="image">
+            </label>
+            <label>
+                description
+                <input name="description">
+            </label>
+            <label>
+                price
+                <input name="price">
+            </label>
+            <label>
+                inventory
+                <input name="invAmount">
+            </label>
+            <button>
+                add your product listing
+            </button>
+        </form>
+        <div id="removeDiv">
+            <h2>Delete Items From Inventory</h2>
+            <table class="fixed_header" id="removeTable">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>QTY in Inventory</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="deleteBody">
+                </tbody>
+              </table>
+        </div>
+    </main>
+    <script type="module" src="./admin-app.js"></script>
+</body>
+
+</html>

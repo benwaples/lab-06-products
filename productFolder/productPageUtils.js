@@ -6,6 +6,7 @@ export function createProductListing(item) {
 
     const category = item.category;
     liEl.classList.add(category);
+    liEl.id = item.id;
     const title = item.description;
     liEl.title = title;
 
@@ -74,7 +75,6 @@ export function createProductListing(item) {
     descriptionEl.classList = 'description';
     descriptionEl.textContent = item.description;
     liEl.append(descriptionEl);
-
 
     return liEl;
 }
